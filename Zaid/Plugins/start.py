@@ -19,7 +19,7 @@ from Zaid.MusicUtilities.database.queue import (is_active_chat, add_active_chat,
 from Zaid.MusicUtilities.database.sudo import (get_sudoers, get_sudoers, remove_sudo)
 
      
-@Client.on_message(filters.private & filters.incoming & filters.command("start"))
+@Client.on_message(filters.private & filters.incoming & filters.command("mstart"))
 async def play(_, message: Message):
     if len(message.command) == 1:
         user_id = message.from_user.id
